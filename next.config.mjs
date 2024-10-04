@@ -2,11 +2,10 @@
 const isProduction = process.env.NODE_ENV === 'production';
 
 const nextConfig = {
-   basePath: '/medmentors', // Replace with your repository name
-   assetPrefix: '/medmentors/', // Replace with your repository name
-   images: {
-     unoptimized: true,
-   },
+    reactStrictMode: true,
+    output: 'export',
+    trailingSlash: true, 
+    assetPrefix: isProduction ? 'https://piercing-wind.github.io/medmentors/' : '',
 };
 
 
