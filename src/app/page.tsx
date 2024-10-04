@@ -19,7 +19,7 @@ export default function Home() {
               <Image
                  loading="lazy"
                  unoptimized
-                 src='/anime-girl_950633-1297.avif'
+                 src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/anime-girl_950633-1297.avif`}
                  alt='Hero Image'
                  width={32}
                  height={32}
@@ -35,7 +35,7 @@ export default function Home() {
               <Image
                  loading="lazy"
                  unoptimized
-                 src='/whatsapp.png'
+                 src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
                  alt='Hero Image'
                  width={28}
                  height={28}
@@ -56,7 +56,7 @@ export default function Home() {
                 <Image
                      loading="lazy"
                      unoptimized
-                     src='/anime-girl_950633-1297.avif'
+                     src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/anime-girl_950633-1297.avif`}
                      alt='Hero Image'
                      width={32}
                      height={32}
@@ -66,7 +66,7 @@ export default function Home() {
                 <Image
                   loading="lazy"
                   unoptimized
-                  src='/anime-girl_950633-1297.avif'
+                  src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/anime-girl_950633-1297.avif`}
                   alt='Hero Image'
                   width={32}
                   height={32}
@@ -81,7 +81,7 @@ export default function Home() {
               <Image
                  loading="lazy"
                  unoptimized
-                 src='/whatsapp.png'
+                 src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
                  alt='Hero Image'
                  width={28}
                  height={28}
@@ -97,7 +97,7 @@ export default function Home() {
          <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto mt-20 sm:pt-14">
             <div className="h-[16rem] sm:h-[18rem] md:h-[32rem] lg:h-[38rem] w-[22rem] sm:w-[32rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[70rem] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
                <Image
-                  src='/workshop.jpg'
+                  src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/workshop.jpg`}
                   alt='Workshop'
                   fill
                   loading="lazy"
@@ -115,7 +115,7 @@ export default function Home() {
                   <Image
                      loading="lazy"
                      unoptimized
-                     src='/whatsapp.png'
+                     src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
                      alt='Hero Image'
                      width={28}
                      height={28}
@@ -133,7 +133,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-5 mx-14 mt-10">
                <div className="rounded-full relative h-44 w-44 overflow-hidden">
                   <Image
-                     src='/anime-girl_950633-1297.avif'
+                     src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/anime-girl_950633-1297.avif`}
                      alt='Hero Image'
                      fill
                      loading="lazy"
@@ -191,7 +191,7 @@ export default function Home() {
                  <Image
                     loading="lazy"
                     unoptimized
-                    src='/whatsapp.png'
+                    src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
                     alt='Hero Image'
                     width={28}
                     height={28}
@@ -204,7 +204,7 @@ export default function Home() {
                  <Image
                     loading="lazy"
                     unoptimized
-                    src='/instaColorFull.svg'
+                    src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/instaColorFull.svg`}
                     alt='Hero Image'
                     width={30}
                     height={28}

@@ -6,7 +6,7 @@ export const Header = () => {
   return (
     <nav className="flex items-center justify-center md:justify-between px-20 my-5">
       <Image
-         src="/logo.png"
+         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
          alt="Logo"
          unoptimized
          loading="lazy"

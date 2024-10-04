@@ -5,11 +5,11 @@ import Image from 'next/image';
 import { ChevronLeftIcon, ChevronRightIcon } from 'lucide-react';
 
 const images = [
-      "/course1.png",
-      "/course2.png",
-      "/course3.jpeg",
-      "/course4.jpeg",
-      "/course5.png",
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course1.png`,
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course2.png`,
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course3.jpeg`,
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course4.jpeg`,
+      `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course5.png`,
 ];
 
 const Carousel = () => {
