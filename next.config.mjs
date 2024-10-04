@@ -5,7 +5,7 @@ const nextConfig = {
     reactStrictMode: true,
     output: 'export',
     trailingSlash: true, 
-    assetPrefix: isProduction ? 'https://piercing-wind.github.io/medmentors/' : '',
+    assetPrefix: isProduction ? process.env.NEXT_PUBLIC_WEBSITE_URL : '',
 };
 
 
