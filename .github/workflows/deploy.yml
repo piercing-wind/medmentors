@@ -35,7 +35,7 @@ jobs:
         run: pnpm install
       
       # - name: Create .env file
-      #   run: echo "${{ secrets.ENV_VARIABLE }}" > .env
+      #   run: echo "" > .env
 
       - name: Build and export
         run: pnpm run build
@@ -58,4 +58,6 @@ jobs:
       - name: Publish to GitHub Pages 🚀
         id: deployment
         uses: actions/deploy-pages@v4
-     
+        with:
+            token: ${{ secrets.PAT_TOKEN }}
+        
