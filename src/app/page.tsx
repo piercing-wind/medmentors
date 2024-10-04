@@ -29,7 +29,7 @@ export default function Home() {
               About Me 
               <ChevronRight size={24} className="text-blue-500"/>
            </Link>
-           {/* <Link href='' className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500"
+           {/* <Link href='' classNam="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500"
               style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
            >
               <Image
