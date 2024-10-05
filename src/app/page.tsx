@@ -7,7 +7,7 @@ import { FadeText } from "@/components/ui/fade-text";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import TypingAnimation from "@/components/ui/typing-animation";
 import TypingAnimation2 from "@/components/ui/typing-animation2";
-import { ChevronRight, Globe2, MailIcon, PhoneIcon } from "lucide-react";
+import { ChevronRight, Globe2, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
