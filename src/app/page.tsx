@@ -8,7 +8,7 @@ import { FadeText } from "@/components/ui/fade-text";
 import GradualSpacing from "@/components/ui/gradual-spacing";
 import TypingAnimation from "@/components/ui/typing-animation";
 import TypingAnimation2 from "@/components/ui/typing-animation2";
-import { ChevronRight, Globe2, PhoneIcon } from "lucide-react";
+import { ChevronRight, Dot, Globe2, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -245,21 +245,22 @@ export default function Home() {
                <h2 className="text-4xl font-bold my-10 text-[#1e1e1f]" id="work">Work Experience</h2>
                <div className="w-full flex items-start justify-between">
                   <span>
-                     <h3 className="text-2xl">Health Skill Development Center</h3>
+                     <h3 className="text-lg font-medium md:text-2xl">Health Skill Development Center</h3>
                      <p className="text-lg text-cyan-500">Clinical Insturctor</p>
                   </span>
-                  <span>2022 - Present</span>
+                  <span className="text-sm">2022 - Present</span>
                </div>
-               <ul className="list-disc list-inside text-lg mt-8">
-                  <li>Clinical Insturctor at Health Skill Development Center, Amritsar</li>
-                  <li>ICU staff at The corporate Hospital,  Amritsar, &#40; 3 Years &#41; </li>
-                  <li>Traniee at Fortis Escort Hospital, Amritsar  &#40; 6 Months &#41;</li>
+               <ul className="ml-4 list-inside text-lg mt-8 flex flex-col gap-y-4 leading-tight ">
+                  <li className="flex items-center"><Dot size={40} className="text-cyan-400"/> Clinical Insturctor at Health Skill Development Center, Amritsar</li>
+                  <li className="flex items-center"><Dot size={40} className="text-cyan-400"/>ICU staff at The corporate Hospital,  Amritsar, &#40; 3 Years &#41; </li>
+                  <li className="flex items-center"><Dot size={40} className="text-cyan-400"/>Traniee at Fortis Escort Hospital, Amritsar  &#40; 6 Months &#41;</li>
                </ul>
                </div>
+            <AnimatedBorder end="100%"/>
             </div>
          </div>
          
-         <footer className="2xl:w-[75rem] mx-auto mt-14 mb-14">
+         <footer className="2xl:w-[75rem] mx-auto mt-14 mb-16">
             <div className="mx-14 border border-cyan-500 flex gap-y-4 p-4 flex-col md:flex-row items-center md:items-start justify-between px-14 rounded-2xl">
                <Image
                   src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
@@ -270,11 +271,11 @@ export default function Home() {
                   loading="lazy"
                />
                <p className="mt-auto mb-auto opacity-80">© Medmentors 2024</p>
-               <div className=" ">
-               <h3 className="font-medium">Follow Us</h3>
-               <Social />
+               <div className="flex flex-col items-start justify-start ">
+                  <h3 className="font-medium -mb-8">Follow Us</h3>
+                  <Social />
 
-             </div>
+               </div>
 
 
             </div>
