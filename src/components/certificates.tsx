@@ -81,7 +81,6 @@ export const Certificates = () => {
                <Image
                   unoptimized
                   loading="lazy"
-                  
                   src={item.logo}
                   alt={item.name}
                   height={item.height}
@@ -102,7 +101,11 @@ export const Certificates = () => {
 
          <Modal isOpen={modalIsOpen} onClose={closeModal}>
             <div className="flex justify-center items-center h-[70vh] m-auto">
-               <Image src={currentCertificate} alt="Certificate" className="max-w-full max-h-full" />
+               <Image 
+               unoptimized
+               loading="lazy"
+               src={currentCertificate} alt="Certificate" 
+               className="max-w-full max-h-full" />
             </div>
          </Modal>
 
