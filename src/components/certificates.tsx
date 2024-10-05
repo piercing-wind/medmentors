@@ -46,6 +46,20 @@ export const Certificates = () => {
          height: 100,
          width: 100,
       },
+      {
+         certificate : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/infection-control-nurse.jpg`,
+         logo : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/logos/ICN.jpg`,
+         name: "Infection Control Nurse",
+         height: 100,
+         width: 100,
+      },
+      {
+         certificate : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/Critical_Care_Nursing.jpg`,
+         logo : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/logos/adcn.jpg`,
+         name: "Advanced Critical Care Nursing",
+         height: 120,
+         width: 120,
+      },
    ]
    const openModal = (certificate : string) => {
       setCurrentCertificate(certificate);

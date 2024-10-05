@@ -8,7 +8,7 @@ import { useSwipeable } from 'react-swipeable';
 const images = [
   `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course1.png`,
   `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course2.png`,
-  `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course3.jpeg`,
+  `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course3.png`,
   `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course4.jpeg`,
   `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course5.png`,
 ];
