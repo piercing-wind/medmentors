@@ -262,7 +262,7 @@ export default function Home() {
          <footer className="2xl:w-[75rem] mx-auto mt-14 mb-14">
             <div className="mx-14 border border-cyan-500 flex gap-y-4 p-4 flex-col md:flex-row items-center md:items-start justify-between px-14 rounded-2xl">
                <Image
-                  src="/logo.png"
+                  src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
                   alt="Logo"
                   width={100}
                   height={100}
