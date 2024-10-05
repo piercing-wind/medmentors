@@ -1,7 +1,6 @@
 'use client';
 
 import Image from "next/image";
-import FadeUpAnimator from "./animator"
 import Modal from './model';
 import { useState } from 'react';
 import Marquee from "./ui/marquee";
