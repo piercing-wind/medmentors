@@ -1,5 +1,12 @@
+import AnimatedBorder from "@/components/animatedBorder";
+import FadeUpAnimator from "@/components/animator";
 import Carousel from "@/components/crousel";
 import { Header } from "@/components/header";
+import { Social } from "@/components/social";
+import { FadeText } from "@/components/ui/fade-text";
+import GradualSpacing from "@/components/ui/gradual-spacing";
+import TypingAnimation from "@/components/ui/typing-animation";
+import TypingAnimation2 from "@/components/ui/typing-animation2";
 import { ChevronRight, Globe2, MailIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,10 +17,18 @@ export default function Home() {
       <div className="fixed -z-50 right-[10%] w-[40%] h-[30rem] rounded-full opacity-20 blur-3xl bg-blue-700 rotate-45"/>
       <Header />
       <div className="w-[90%] md:w-[75%] mx-auto my-14 md:py-14">
-         <h1 className="text-4xl *:sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1e1e1f] leading-tight tracking-normal">Empowering Future Lifesavers with Essential Skills</h1>
-         <p className="text-xl md:w-[38rem] my-4 tracking-wide">Hi, I&apos;m Komal! I train aspiring nurses and students at <span className="font-mono border px-1 rounded-lg font-semibold">Medmentors</span> in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference.</p>
-         <div className="flex items-center gap-5">
-           <Link href='' className="border-2 border-white flex w-40 shadow-inner shadow-blue-400 rounded-3xl p-1 items-center justify-between hover:scale-105 transition-all duration-500 my-4"
+       <GradualSpacing
+         className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1e1e1f] leading-tight tracking-normal flex flex-wrap"
+         text="Empowering Future Lifesavers with Essential Skills"
+       />
+         <TypingAnimation
+           text=" Hi, I'm Komal! I train aspiring nurses and students at <span className='font-mono border px-1 rounded-lg font-semibold'>Medmentors</span> in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference."
+           duration={10}
+           className="custom-class mt-8"
+         />
+         <FadeUpAnimator>
+        <div className="flex items-center gap-5">
+           <Link href='#komal' className="border-2 border-white flex w-40 shadow-inner shadow-blue-400 rounded-3xl p-1 items-center justify-between hover:scale-105 transition-all duration-500 my-8"
               style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
            >
               <Image
@@ -29,29 +44,72 @@ export default function Home() {
               About Me 
               <ChevronRight size={24} className="text-blue-500"/>
            </Link>
-           {/* <Link href='' classNam="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500"
-              style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
-           >
-              <Image
-                 loading="lazy"
-                 unoptimized
-                 src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
-                 alt='Hero Image'
-                 width={28}
-                 height={28}
-                 
-                 className=" flex-shrink w-8 h-8 object-cover"
-              />
-              Contact Me 
-              <ChevronRight size={24} className="text-blue-500"/>
-           </Link> */}
          </div>
+         </FadeUpAnimator>
       </div>
+
+      <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto mt-20 sm:pt-14 mb-24">
+         <FadeUpAnimator>
+            <div className="h-[16rem] sm:h-[18rem] md:h-[32rem] lg:h-[40rem] w-[22rem] md:w-[28rem] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
+               <Image
+                  src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/service1.jpeg`}
+                  alt='Workshop'
+                  fill
+                  loading="lazy"
+                  unoptimized
+                  style={{objectFit: "contain"}}
+               />
+            </div>
+         </FadeUpAnimator>
+            <div className="flex flex-col lg:flex-row gap-x-4 items-start pl-4 sm:pl-14 lg:pl-0 justify-between mt-20 my-8">
+               <FadeText
+                 className="lg:w-[40%] flex-shrink-0 text-2xl md:text-4xl font-extrabold text-[#1e1e1f] mb-8 sm:mb-16 text-left"
+                 direction="left"
+                 framerProps={{
+                   show: { transition: { duration : 1, delay: 0.4 } },
+                 }}
+                 text="Comprehensive Healthcare, Elderly Care, and Emergency Response Services"
+               />
+               <div className="lg:w-[60%] flex-shrink-0">
+               <TypingAnimation2
+                  className="text-xl tracking-wide"
+                  duration={10}
+                  text="We offer expert training in healthcare, emergency response, and specialized elderly care services, ensuring compassionate support and essential skills for all ages. Empower yourself to care for others confidently!"
+               />
+                   <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20am%20interested%20in%20attending%20your%20workshop' target="_blank" className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500 mt-8"
+                  style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
+                 >
+                  <Image
+                     loading="lazy"
+                     unoptimized
+                     src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
+                     alt='Hero Image'
+                     width={28}
+                     height={28}
+                     
+                     className=" flex-shrink w-8 h-8 object-cover"
+                  />
+                  Consult Now
+                  <ChevronRight size={24} className="text-blue-500"/>
+               </Link>
+               </div>
+            </div>
+         <AnimatedBorder />
+         </div>
+
+         
        <Carousel />
-       <div className="w-full mx-auto flex flex-col pl-4 md:pl-20 xl:pl-auto xl:flex-row items-start justify-between">
-       <h6 className="text-2xl md:text-4xl w-full lg:w-[40%] font-extrabold leading-tight text-[#1e1e1f] text-left text-wrap mb-2">Our Services: Expert Training in Healthcare and Emergency Care</h6>
-            
-            <div >
+       
+       <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto flex flex-col pl-4 md:pl-20 xl:pl-0 xl:flex-row items-start justify-between mt-20">
+            <FadeText
+                 className="lg:w-[40%] flex-shrink-0 text-2xl md:text-4xl font-extrabold text-[#1e1e1f] mb-8 sm:mb-16 text-left"
+                 direction="left"
+                 framerProps={{
+                   show: { transition: { duration : 1, delay: 0.4 } },
+                 }}
+                 text="Our Courses: Expert Training in Healthcare and Emergency Care"
+               />
+            <div className="lg:w-[60%] flex-shrink-0">
                <div className="flex items-center w-14 -space-x-2 mb-4">
                 <Image
                      loading="lazy"
@@ -74,8 +132,12 @@ export default function Home() {
                   className="rounded-full flex-shrink w-8 h-8 object-cover"
                />
                </div>
-               <p className="text-xl tacking-wide">Learn essential healthcare and emergency skills from expert instructors. Join us to gain hands-on experience, certification, and the confidence to save lives!</p>
-             <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20am%20interested%20in%20attending%20your%20courses' target="_blank" className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500 mt-4"
+               <TypingAnimation2
+                  className="text-xl tracking-wide"
+                  duration={10}
+                  text="Learn essential healthcare and emergency skills from expert instructors. Join us to gain hands-on experience, certification, and the confidence to save lives!"
+               />
+             <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20am%20interested%20in%20attending%20your%20courses' target="_blank" className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500 mt-8"
               style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
              >
               <Image
@@ -91,9 +153,10 @@ export default function Home() {
               Contact Me 
               <ChevronRight size={24} className="text-blue-500"/>
            </Link>
+         <AnimatedBorder />
          </div>
-
       </div>
+    
          <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto mt-20 sm:pt-14">
             <div className="h-[16rem] sm:h-[18rem] md:h-[32rem] lg:h-[38rem] w-[22rem] sm:w-[32rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[70rem] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
                <Image
@@ -105,11 +168,23 @@ export default function Home() {
                   style={{objectFit: "cover"}}
                />
             </div>
-            <div className="flex flex-col lg:flex-row items-start pl-4 sm:pl-14 lg:pl-auto justify-between mt-8">
-               <h5 className="lg:w-[40%] flex-shrink-0 text-2xl md:text-4xl font-extrabold text-[#1e1e1f] mb-8 sm:mb-16 text-left">Hands-On Workshops: Learn, Practice, and Master Lifesaving Skills</h5>
-               <div className="">
-                   <p className="text-xl tracking-wide">Our workshops are designed to help you learn and practice essential healthcare skills in a supportive environment. Join us to gain hands-on experience, certification, and the confidence to save lives!</p>
-                   <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20am%20interested%20in%20attending%20your%20workshop' target="_blank" className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500 mt-4"
+            <div className="flex flex-col lg:flex-row items-start pl-4 sm:pl-14 lg:pl-0 justify-between mt-20">
+            <FadeText
+                 className="lg:w-[40%] flex-shrink-0 text-2xl md:text-4xl font-extrabold text-[#1e1e1f] mb-8 sm:mb-16 text-left"
+                 direction="left"
+                 framerProps={{
+                   show: { transition: { duration : 1, delay: 0.4 } },
+                 }}
+                   text="Hands-On Workshops: Learn, Practice, and Master Lifesaving Skills"
+               />
+               <div className="lg:w-[60%] flex-shrink-0">
+               <TypingAnimation2
+                  className="text-xl tracking-wide"
+                  duration={10}
+                  text="Our workshops are designed to help you learn and practice essential healthcare skills in a supportive environment. Join us to gain hands-on experience, certification, and the confidence to save lives!"
+               />
+
+                   <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20am%20interested%20in%20attending%20your%20workshop' target="_blank" className="border-2 border-white flex w-44 shadow-inner shadow-blue-400 rounded-3xl p-1 px-2 items-center justify-between hover:scale-105 transition-all duration-500 mt-8"
                   style={{boxShadow: "0 0 10px 0.2rem rgba(59, 130, 246, 0.5)"}}
                  >
                   <Image
@@ -127,6 +202,7 @@ export default function Home() {
                </Link>
                </div>
             </div>
+            <AnimatedBorder />
          </div>
 
          <div className="xl:w-[70rem] mx-auto mt-20 pt-10 flex flex-col items-center lg:flex-row lg:items-start">
@@ -185,38 +261,7 @@ export default function Home() {
                <p className="mt-auto mb-auto opacity-80">© Medmentors 2024</p>
                <div className=" ">
                <h3 className="font-medium">Follow Us</h3>
-               <div className="flex items-center gap-5">
-               <Link href='https://wa.me/916283341254?text=Hi%20Komal%2C%20I%20found%20you%20through%20your%20website%20and%20I%20would%20like%20to%20contact%20you' target="_blank" className="hover:scale-105 transition-all duration-500 mt-4"
-                >
-                 <Image
-                    loading="lazy"
-                    unoptimized
-                    src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/whatsapp.png`}
-                    alt='Hero Image'
-                    width={28}
-                    height={28}
-
-                    className=" flex-shrink w-8 h-8 object-cover"
-                 />
-               </Link>
-               <Link href='https://www.instagram.com/stone.heart1005/' target="_blank" className="hover:scale-105 transition-all duration-500 mt-4 relative"
-                >
-                 <Image
-                    loading="lazy"
-                    unoptimized
-                    src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/instaColorFull.svg`}
-                    alt='Hero Image'
-                    width={30}
-                    height={28}
-
-                    className=" flex-shrink w-8 h-8 object-cover"
-                 />
-               </Link>
-               <Link href='mailto:komala1217@icloud.com' className="hover:scale-105 transition-all duration-500 mt-4 relative"
-                >
-                  <MailIcon size={32} className="text-blue-500"/>
-               </Link>
-               </div>
+               <Social />
 
              </div>
 
