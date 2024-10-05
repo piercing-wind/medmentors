@@ -112,7 +112,7 @@ const Carousel = () => {
             animate="center"
             exit="exit"
             transition={{ duration: 0.5 }}
-            className="absolute w-full h-full flex items-center justify-center rounded-xl md:rounded-3xl overflow-hidden z-50 shadow-lg"
+            className="absolute w-full h-full flex items-center justify-center rounded-xl md:rounded-3xl overflow-hidden z-40 shadow-lg"
             style={{boxShadow: '0 0 10px 2px rgba(0, 0, 255, 0.3)'}}
           >
             <Image
