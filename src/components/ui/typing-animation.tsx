@@ -20,6 +20,7 @@ export default function TypingAnimation({
   const [displayedText, setDisplayedText] = useState<ReactNode[]>([]);
   const ref = useRef(null);
   const inView = useInView(ref, { once: false });
+  const animationFrameRef = useRef<number | null>(null);
 
   useEffect(() => {
     if (inView && typeof text === "string") {
@@ -34,18 +35,18 @@ export default function TypingAnimation({
           }
           if (domNode instanceof Text) {
             return domNode.data.split('').map((char, index) => (
-              <span key={index}>{char}</span>
+              <span key={`${char}-${index}-${Date.now()}`}>{char}</span>
             ));
           }
         },
       });
 
       const flattenText = (nodes: ReactNode[]): ReactNode[] => {
-        return nodes.flatMap<ReactNode>((node) => {
+        return nodes.flatMap<ReactNode>((node, nodeIndex) => {
           if (typeof node === 'string') {
-            return node.split('').map((char, index) => <span key={index}>{char}</span>);
+            return node.split('').map((char, index) => <span key={`${char}-${nodeIndex}-${index}-${Date.now()}`}>{char}</span>);
           } else if (React.isValidElement(node) && node.props.children) {
-            return [React.cloneElement(node, {}, flattenText(React.Children.toArray(node.props.children)))];
+            return [React.cloneElement(node, { key: `${nodeIndex}-${Date.now()}` }, flattenText(React.Children.toArray(node.props.children)))];
           } else {
             return [node];
           }
@@ -67,13 +68,16 @@ export default function TypingAnimation({
         }
 
         if (i < flatText.length) {
-          requestAnimationFrame(typeCharacter);
+          animationFrameRef.current = requestAnimationFrame(typeCharacter);
         }
       };
 
-      requestAnimationFrame(typeCharacter);
+      animationFrameRef.current = requestAnimationFrame(typeCharacter);
 
       return () => {
+        if (animationFrameRef.current) {
+          cancelAnimationFrame(animationFrameRef.current);
+        }
         startTime = null;
       };
     }
@@ -81,7 +85,9 @@ export default function TypingAnimation({
 
   return (
     <div ref={ref} className={cn("text-xl md:w-[38rem] my-4 tracking-wide", className)}>
-      {displayedText}
+      {displayedText.map((char, index) => (
+        <span key={`${char}-${index}-${Date.now()}`}>{char}</span>
+      ))}
     </div>
   );
 }

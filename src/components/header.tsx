@@ -39,13 +39,13 @@ export const Header = () => {
         width={100}
         height={100}
       />
-      <ul className="p-1 border-2 rounded-xl hidden md:flex items-center gap-10 px-4">
-        <li
+      <ul className="p-1 border-2 rounded-xl fixed flex md:relative bottom-4 z-30 md:flex items-center gap-10 px-4">
+      <li
           className={`hover:bg-blue-100 hover:bg-opacity-40 hover:border hover:rounded-xl px-2 py-1 ${
-            activeLink === "home" ? "bg-blue-100 bg-opacity-40 border rounded-xl" : ""
+            activeLink === "komal" ? "bg-blue-100 bg-opacity-40 border rounded-xl" : ""
           }`}
         >
-          <Link className="flex items-center gap-2" href="#">
+          <Link className="flex items-center gap-2" href="#home">
             <Home size={24} /> Home
           </Link>
         </li>

@@ -1,6 +1,5 @@
 "use client";
-
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useInView } from "framer-motion";
 
 import { cn } from "@/lib/utils";
@@ -51,7 +50,9 @@ export default function TypingAnimation2({
         className,
       )}
     >
-      {displayedText ? displayedText : text}
+      {displayedText.split('').map((char, index) => (
+        <span key={`${char}-${index}-${Math.random()}-${Date.now()}`}>{char}</span>
+      ))}
     </h1>
   );
 }
