@@ -228,7 +228,7 @@ export default function Home() {
                </Link>
                <h1 className="text-5xl sm:text-7xl font-extrabold text-[#1e1e1f] mt-4 lg:mt-8 text-nowrap" >Komal Singh</h1>
                <h3 className="text-2xl sm:text-4xl">Founder & Lead Instructor</h3>
-               <p className="text-lg tracking-normal my-5">Komal Sharma is a dedicated healthcare educator with over 10 years of experience. She founded <span className="font-bold">Medmentors</span> to empower students with essential skills in emergency care, blending expert knowledge with hands-on training to prepare future healthcare professionals.</p>
+               <p className="text-lg tracking-normal my-5">Komal Singh is a dedicated healthcare educator with over 5 years of experience. She founded <span className="font-bold">Medmentors</span> to empower students with essential skills in emergency care, blending expert knowledge with hands-on training to prepare future healthcare professionals.</p>
              
                <div className="mt-14">
                <h2 className="text-4xl font-bold my-10" id="work">Work Experience</h2>
