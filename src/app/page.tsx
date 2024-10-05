@@ -25,7 +25,7 @@ export default function Home() {
          <TypingAnimation
            text=" Hi, I'm Komal! I train aspiring nurses and students at <span className='font-mono border px-1 rounded-lg font-semibold'>Medmentors</span> in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference."
            duration={10}
-           className="custom-class mt-8"
+           className="custom-class mt-8 h-32 md:h-28"
          />
          <FadeUpAnimator>
         <div className="flex items-center gap-5">
@@ -73,7 +73,7 @@ export default function Home() {
                />
                <div className="lg:w-[60%] flex-shrink-0 mt-8 md:mt-0">
                <TypingAnimation2
-                  className="text-xl tracking-wide"
+                  className="text-xl tracking-wide h-44 md:h-28"
                   duration={10}
                   text="We offer expert training in healthcare, emergency response, and specialized elderly care services, ensuring compassionate support and essential skills for all ages. Empower yourself to care for others confidently!"
                />
@@ -134,7 +134,7 @@ export default function Home() {
                /> */}
                </div>
                <TypingAnimation2
-                  className="text-xl tracking-wide"
+                  className="text-xl tracking-wide h-36 md:h-20"
                   duration={10}
                   text="Learn essential healthcare and emergency skills from expert instructors. Join us to gain hands-on experience, certification, and the confidence to save lives!"
                />
@@ -180,7 +180,7 @@ export default function Home() {
                />
                <div className="lg:w-[60%] flex-shrink-0">
                <TypingAnimation2
-                  className="text-xl tracking-wide mt-8 md:mt-0"
+                  className="text-xl tracking-wide mt-8 md:mt-0 h-40 md:h-20"
                   duration={10}
                   text="Our workshops are designed to help you learn and practice essential healthcare skills in a supportive environment. Join us to gain hands-on experience, certification, and the confidence to save lives!"
                />
