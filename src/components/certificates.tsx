@@ -102,7 +102,7 @@ export const Certificates = () => {
 
          <Modal isOpen={modalIsOpen} onClose={closeModal}>
             <div className="flex justify-center items-center h-[70vh] m-auto">
-               <img src={currentCertificate} alt="Certificate" className="max-w-full max-h-full" />
+               <Image src={currentCertificate} alt="Certificate" className="max-w-full max-h-full" />
             </div>
          </Modal>
 

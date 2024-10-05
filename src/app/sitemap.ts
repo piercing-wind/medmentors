@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
    const currentDate = new Date().toISOString();
-   const website = process.env.NEXT_PUBLIC_WEBSITE_URL ;
+   const website = process.env.NEXT_PUBLIC_WEBSITE_URL;
 
    return [
     {

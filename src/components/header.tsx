@@ -46,7 +46,7 @@ export const Header = () => {
           }`}
         >
           <Link className="flex items-center gap-2" href="#home">
-            <UserCircle size={24} /> Home
+            <Home size={24} /> Home
           </Link>
         </li>
         <li
