@@ -6,7 +6,6 @@ import { Header } from "@/components/header";
 import { Social } from "@/components/social";
 import { FadeText } from "@/components/ui/fade-text";
 import GradualSpacing from "@/components/ui/gradual-spacing";
-import TypingAnimation from "@/components/ui/typing-animation";
 import TypingAnimation2 from "@/components/ui/typing-animation2";
 import { ChevronRight, Dot, Globe2, PhoneIcon } from "lucide-react";
 import Image from "next/image";
