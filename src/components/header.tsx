@@ -30,7 +30,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-center md:justify-between px-20 my-5 z-50">
+    <nav className="flex items-center justify-center md:justify-between px-20 my-5 z-50 ">
       <Image
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
         alt="Logo"
@@ -39,7 +39,7 @@ export const Header = () => {
         width={100}
         height={100}
       />
-      <ul className="p-1 border-2 rounded-xl fixed flex md:relative bottom-4 z-50 md:flex items-center gap-10 px-4 backdrop-blur-xl">
+      <ul className="p-1 border-2 rounded-xl fixed mx-auto  flex md:relative bottom-4 z-50 md:flex items-center gap-10  backdrop-blur-xl">
       <li
           className={`hover:bg-blue-100 hover:bg-opacity-40 hover:border hover:rounded-xl px-2 py-1 ${
             activeLink === "komal" ? "bg-blue-100 bg-opacity-40 border rounded-xl" : ""
