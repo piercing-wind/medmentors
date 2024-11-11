@@ -24,7 +24,7 @@ export default function Home() {
          <TypingAnimation2
            text="Hi, I'm Komal! I train aspiring nurses and students at Medmentors in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference."
            duration={10}
-           className="custom-class mt-8 h-44 md:h-28"
+           className="text-xl mt-8 h-44 md:h-28"
          />
          <FadeUpAnimator>
         <div className="flex items-center gap-5">

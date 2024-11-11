@@ -2,6 +2,7 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useSwipeable } from 'react-swipeable';
 
 const Carousel = () => {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -78,9 +79,17 @@ const Carousel = () => {
    }
  }, [activeIndex]);
 
+
+ const swipeHandlers = useSwipeable({
+   onSwipedLeft: handlePrevClick,
+   onSwipedRight: handleNextClick,
+   trackMouse: true,
+   trackTouch: true,
+ });
+
   return (
     <div className="p-4 max-w-5xl flex flex-col gap-4 relative mx-auto mb-14 overflow-x-hidden">
-      <section className="rounded-xl overflow-hidden min-h-[30vmin] aspect-[4/3] sm:aspect-[16/9] shadow-lg">
+      <section {...swipeHandlers} className="rounded-xl overflow-hidden min-h-[30vmin] aspect-[4/3] sm:aspect-[16/9] shadow-lg">
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             key={activeIndex}
@@ -116,7 +125,7 @@ const Carousel = () => {
             />
           </svg>
         </button>
-        <ul className="flex h-full overflow-x-auto scrollbar-hide w-[90%] mx-4 sm:mx-auto pr-8">
+        <ul className="flex h-full overflow-x-auto scrollbar-hide w-[90%] mx-4 sm:mx-auto">
           {slides.map((slide, index) => (
             <motion.li
               key={index}
