@@ -6,6 +6,9 @@ const nextConfig = {
     output: 'export',
     trailingSlash: true, 
     assetPrefix: isProduction ? process.env.NEXT_PUBLIC_WEBSITE_URL : '',
+    images: {
+      unoptimized: true,
+  },
 };
 
 

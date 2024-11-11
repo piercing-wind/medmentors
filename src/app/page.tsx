@@ -1,7 +1,7 @@
 import AnimatedBorder from "@/components/animatedBorder";
 import FadeUpAnimator from "@/components/animator";
 import { Certificates } from "@/components/certificates";
-import Carousel from "@/components/crousel";
+import Carousel from "@/components/carousel";
 import { Header } from "@/components/header";
 import { Social } from "@/components/social";
 import { FadeText } from "@/components/ui/fade-text";
@@ -22,10 +22,10 @@ export default function Home() {
          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-[#1e1e1f] leading-tight tracking-normal flex flex-wrap"
          text="Empowering Future Lifesavers with Essential Skills"
        />
-         <TypingAnimation
-           text=" Hi, I'm Komal! I train aspiring nurses and students at <span className='font-mono border px-1 rounded-lg font-semibold'>Medmentors</span> in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference."
+         <TypingAnimation2
+           text="Hi, I'm Komal! I train aspiring nurses and students at Medmentors in first aid and essential healthcare practices, helping them develop the skills to save lives and make a real difference."
            duration={10}
-           className="custom-class mt-8 h-32 md:h-28"
+           className="custom-class mt-8 h-44 md:h-28"
          />
          <FadeUpAnimator>
         <div className="flex items-center gap-5">
@@ -96,7 +96,7 @@ export default function Home() {
                </div>
             </div>
          <AnimatedBorder />
-         </div>
+      </div>
 
          
        <Carousel />
@@ -158,8 +158,8 @@ export default function Home() {
          </div>
       </div>
     
-         <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto mt-20 sm:pt-14">
-            <div className="h-[16rem] sm:h-[18rem] md:h-[32rem] lg:h-[38rem] w-[25rem] sm:w-[32rem] md:w-[40rem] lg:w-[50rem] 2xl:w-[70rem] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
+         <div className="max-w-5xl mx-auto mt-20 sm:pt-14 px-2">
+            <div className="min-h-[30vmin] aspect-[16/9] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
                <Image
                   src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/workshop.jpg`}
                   alt='Workshop'
@@ -180,7 +180,7 @@ export default function Home() {
                />
                <div className="lg:w-[60%] flex-shrink-0">
                <TypingAnimation2
-                  className="text-xl tracking-wide mt-8 md:mt-0 h-40 md:h-20"
+                  className="text-xl tracking-wide mt-8 md:mt-0 h-44 md:h-20"
                   duration={10}
                   text="Our workshops are designed to help you learn and practice essential healthcare skills in a supportive environment. Join us to gain hands-on experience, certification, and the confidence to save lives!"
                />
