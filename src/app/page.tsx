@@ -10,6 +10,7 @@ import TypingAnimation2 from "@/components/ui/typing-animation2";
 import { ChevronRight, Dot, Globe2, PhoneIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Certified } from "@/components/certified-company";
 
 export default function Home() {
   return (
@@ -47,7 +48,7 @@ export default function Home() {
          </div>
          </FadeUpAnimator>
       </div>
-
+      <Certified/>
       <div className="lg:w-[60rem] 2xl:w-[70rem] mx-auto mt-20 sm:pt-14 mb-24">
          <FadeUpAnimator>
             <div className="h-[16rem] sm:h-[18rem] md:h-[32rem] lg:h-[40rem] w-[22rem] md:w-[28rem] mx-auto relative rounded-2xl overflow-hidden shadow-lg">
