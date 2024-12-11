@@ -14,6 +14,7 @@ const Carousel = () => {
     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course2.png`,
     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course3.jpeg`,
     `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course5.png`,
+    `${process.env.NEXT_PUBLIC_WEBSITE_URL}/course6.jpg`,
   ];
 
   const variants = {
