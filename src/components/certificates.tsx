@@ -60,6 +60,13 @@ export const Certificates = () => {
          height: 120,
          width: 120,
       },
+      {
+         certificate : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/promember.jpeg`,
+         logo : `${process.env.NEXT_PUBLIC_WEBSITE_URL}/certificates/logos/AHA.jpg`,
+         name: "Professional Member of AHA",
+         height: 120,
+         width: 120,
+      },
    ]
    const openModal = (certificate : string) => {
       setCurrentCertificate(certificate);
@@ -72,10 +79,8 @@ export const Certificates = () => {
    };
    return(
       <div className="">
-
-
          <div className="flex items-start gap-5 mt-14">
-            <Marquee>
+            <Marquee >
             {certificate.map((item, index) => (
              <div key={index} className="flex flex-col items-center justify-between h-44 gap-x-4" onClick={() => openModal(item.certificate)}>  
                <Image
@@ -101,11 +106,13 @@ export const Certificates = () => {
 
          <Modal isOpen={modalIsOpen} onClose={closeModal}>
             <div className="flex justify-center items-center h-[70vh] m-auto">
-               <Image 
-               unoptimized
-               loading="lazy"
-               src={currentCertificate} alt="Certificate" 
-               className="max-w-full max-h-full" />
+               <div className="max-w-4xl w-full flex-shrink-0 h-full relative aspect-auto">
+                  <img 
+                     loading="lazy"
+                     src={currentCertificate} alt="Certificate" 
+                     className="max-w-full max-h-full"
+                 />
+               </div>
             </div>
          </Modal>
 
