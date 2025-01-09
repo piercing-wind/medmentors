@@ -30,7 +30,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-between px-20 my-5 z-50 ">
+    <nav className="flex items-start justify-between px-4 md:px-20 my-5 z-50 ">
       <Image
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
         alt="Logo"
@@ -68,7 +68,7 @@ export const Header = () => {
           </Link>
         </li>
       </ul>
-      <Link href="https://certificates.medmentors.in" className="border rounded-sm px-2">
+      <Link href="https://certificates.medmentors.in" target="_blank" className="border border-blue-500 rounded-md px-4">
         Certificates
       </Link>
     </nav>
