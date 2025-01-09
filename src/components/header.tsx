@@ -30,7 +30,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <nav className="flex items-center justify-center md:justify-between px-20 my-5 z-50 ">
+    <nav className="flex items-center justify-between px-20 my-5 z-50 ">
       <Image
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
         alt="Logo"
@@ -68,8 +68,8 @@ export const Header = () => {
           </Link>
         </li>
       </ul>
-      <Link href="mailto:komala1217@icloud.com" className="hidden md:block">
-        <Mail />
+      <Link href="https://certificates.medmentors.in" className="border rounded-sm px-2">
+        Certificates
       </Link>
     </nav>
   );
