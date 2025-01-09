@@ -30,7 +30,7 @@ export const Header = () => {
   }, []);
 
   return (
-    <nav className="flex items-start justify-between px-4 md:px-20 my-5 z-50 ">
+    <nav className="flex items-start md:items-center justify-between px-4 md:px-20 my-5 z-50 ">
       <Image
         src={`${process.env.NEXT_PUBLIC_WEBSITE_URL}/logo.png`}
         alt="Logo"
